@@ -1,0 +1,23 @@
+{
+  "source": "partner1",
+
+  "data": {
+
+    "unid": "12j45678",
+
+    "firstName": "John",
+
+    "lastName": "Doe",
+
+    "emailAddress": "John.Doe@gmail.com",
+
+    "phoneNumber": "1-(123)-456-7890",
+
+    "countryCode": "USA",
+
+    "consentForDetails": true,
+
+    "marketingConsent": true
+
+  }
+}
