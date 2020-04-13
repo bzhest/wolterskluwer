@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import javax.annotation.Generated;
 
 @Generated("com.robohorse.robopojogenerator")
-public class FirstSample {
+public class JsonSample {
 
     @JsonProperty("data")
     private Data data;
@@ -32,7 +32,7 @@ public class FirstSample {
     @Override
     public String toString() {
         return
-                "FirstSample{" +
+                "JsonSample{" +
                         "data = '" + data + '\'' +
                         ",source = '" + source + '\'' +
                         "}";

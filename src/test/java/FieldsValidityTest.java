@@ -1,5 +1,5 @@
 import com.example.wolterskluwer.helpers.Patterns;
-import com.example.wolterskluwer.pojo.FirstSample;
+import com.example.wolterskluwer.pojo.JsonSample;
 import org.assertj.core.api.SoftAssertions;
 import org.junit.Test;
 
@@ -14,10 +14,10 @@ public class FieldsValidityTest {
 
     @Test
     public void checkValidFields() {
-        FirstSample firstSample = getObjectFromJson(FirstSample.class, FIRST_SAMPLE);
-        String unid = firstSample.getData().getUnid();
-        String email = firstSample.getData().getEmailAddress();
-        String phone = firstSample.getData().getPhoneNumber();
+        JsonSample jsonSample = getObjectFromJson(JsonSample.class, FIRST_SAMPLE);
+        String unid = jsonSample.getData().getUnid();
+        String email = jsonSample.getData().getEmailAddress();
+        String phone = jsonSample.getData().getPhoneNumber();
         softly.assertThat(unid).matches(Patterns.USER_ID.getValuePattern());
         softly.assertThat(email).matches(Patterns.EMAIL_VALUE.getValuePattern());
         softly.assertThat(phone).matches(Patterns.PHONE_NUMBER_VALUE.getValuePattern());
@@ -26,10 +26,10 @@ public class FieldsValidityTest {
 
     @Test
     public void checkInvalidFields() {
-        FirstSample firstSample = getObjectFromJson(FirstSample.class, SECOND_SAMPLE);
-        String unid = firstSample.getData().getUnid();
-        String email = firstSample.getData().getEmailAddress();
-        String phone = firstSample.getData().getPhoneNumber();
+        JsonSample jsonSample = getObjectFromJson(JsonSample.class, SECOND_SAMPLE);
+        String unid = jsonSample.getData().getUnid();
+        String email = jsonSample.getData().getEmailAddress();
+        String phone = jsonSample.getData().getPhoneNumber();
         softly.assertThat(unid).matches(Patterns.USER_ID.getValuePattern());
         softly.assertThat(email).matches(Patterns.EMAIL_VALUE.getValuePattern());
         softly.assertThat(phone).matches(Patterns.PHONE_NUMBER_VALUE.getValuePattern());
@@ -38,10 +38,10 @@ public class FieldsValidityTest {
 
     @Test
     public void checkBothValidAndInvalidFields() {
-        FirstSample firstSample = getObjectFromJson(FirstSample.class, THIRD_SAMPLE);
-        String unid = firstSample.getData().getUnid();
-        String email = firstSample.getData().getEmailAddress();
-        String phone = firstSample.getData().getPhoneNumber();
+        JsonSample jsonSample = getObjectFromJson(JsonSample.class, THIRD_SAMPLE);
+        String unid = jsonSample.getData().getUnid();
+        String email = jsonSample.getData().getEmailAddress();
+        String phone = jsonSample.getData().getPhoneNumber();
         softly.assertThat(unid).matches(Patterns.USER_ID.getValuePattern());
         softly.assertThat(email).matches(Patterns.EMAIL_VALUE.getValuePattern());
         softly.assertThat(phone).matches(Patterns.PHONE_NUMBER_VALUE.getValuePattern());

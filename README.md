@@ -1,4 +1,4 @@
-Sample with Json file that where given in task is stored in path 'com/example/jsonSample/firstSample.json' and assumed as one with correct data.
+Sample with Json file that where given in task is stored in path 'com/example/jsonSample/jsonSample.json' and assumed as one with correct data.
 Files 'com/example/jsonSample/secondSample.json' and 'com/example/jsonSample/thirdSample.json'
 stores invalid values for 'unid', 'emailAddress' and 'phoneNumber' fields.
 
